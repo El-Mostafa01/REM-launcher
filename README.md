@@ -12,6 +12,14 @@ https://github.com/El-Mostafa01/REM-launcher/releases/latest/download/REM-launch
 
 ---
 
+## Install with Downloader (easiest)
+
+1. On the projector, open **Downloader** by AFTVnews (free on Google Play).
+2. Enter the code **3741278** and press **Go**. It always points to the latest release.
+3. When the download finishes, press **Install**. The first time, Android asks you to allow Downloader
+   to install apps: choose **Settings**, enable it, press **Back**, then **Install**.
+4. Press **Open**.
+
 ## Install from a USB drive (no PC or ADB on the projector)
 
 1. **On your computer**, copy `REM-launcher.apk` to a USB drive (FAT32 or exFAT, any folder).
