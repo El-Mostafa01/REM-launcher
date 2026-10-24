@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Original hero art: northern lights over a dark mountain range. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="800dp"
+    android:height="200dp"
+    android:viewportWidth="1600"
+    android:viewportHeight="400">
+    <path android:pathData="M0,0h1600v400h-1600z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="0" android:startY="0" android:endX="0" android:endY="400">
+                <item android:offset="0" android:color="#FF020A14" />
+                <item android:offset="0.7" android:color="#FF06202E" />
+                <item android:offset="1" android:color="#FF0B3B47" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:fillColor="#CCFFFFFF"
+        android:pathData="M120,50a2,2 0 1,0 4,0a2,2 0 1,0 -4,0zM260,120a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0zM420,40a2,2 0 1,0 4,0a2,2 0 1,0 -4,0zM700,30a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0zM980,60a2,2 0 1,0 4,0a2,2 0 1,0 -4,0zM1240,25a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0zM1500,90a2,2 0 1,0 4,0a2,2 0 1,0 -4,0zM1380,140a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0zM860,150a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0z" />
+    <path android:pathData="M0,210C300,90 600,270 900,130C1150,20 1400,170 1600,70L1600,150C1400,250 1150,100 900,210C600,340 300,170 0,290z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="0" android:startY="0" android:endX="1600" android:endY="0">
+                <item android:offset="0" android:color="#2600FFA0" />
+                <item android:offset="0.45" android:color="#8030E8C8" />
+                <item android:offset="0.8" android:color="#9940B0FF" />
+                <item android:offset="1" android:color="#40A070FF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:pathData="M300,120C600,30 850,170 1100,70C1300,0 1450,60 1600,20L1600,60C1450,110 1300,60 1100,130C850,230 600,90 300,170z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="300" android:startY="0" android:endX="1600" android:endY="0">
+                <item android:offset="0" android:color="#0000FFC0" />
+                <item android:offset="0.5" android:color="#6650FFD0" />
+                <item android:offset="1" android:color="#33B080FF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:fillColor="#FF0B1A24"
+        android:pathData="M0,320L90,280L170,300L260,240L330,275L420,215L500,260L590,230L680,280L760,250L850,200L930,245L1010,190L1090,240L1180,205L1260,255L1350,215L1440,265L1530,235L1600,260L1600,400L0,400z" />
+    <path
+        android:fillColor="#FF03070C"
+        android:pathData="M0,370L120,330L240,360L350,320L470,355L600,335L720,375L860,340L1000,370L1120,335L1250,365L1380,330L1500,360L1600,340L1600,400L0,400z" />
+</vector>

@@ -23,6 +23,11 @@
         <intent>
             <action android:name="android.settings.MANAGE_DEFAULT_APPS_SETTINGS" />
         </intent>
+        <!-- Finds the Live TV app for the Live TV tile. -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="content" android:host="android.media.tv" />
+        </intent>
     </queries>
 
     <application
@@ -44,12 +49,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
                 <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
             </intent-filter>
-            <!-- Offered as a Home app; only used where the device lets the user choose one. -->
+            <!-- Offered as a Home app; Android uses it wherever the device lets the user choose one. -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.HOME" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <!-- Opt-in Home Redirect for Google TV, enabled by the user in Accessibility settings. -->
+        <service
+            android:name=".HomeRedirectService"
+            android:exported="true"
+            android:label="@string/redirect_service_name"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/home_redirect" />
+        </service>
     </application>
 </manifest>

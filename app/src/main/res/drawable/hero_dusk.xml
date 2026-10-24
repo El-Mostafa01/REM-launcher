@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Original hero art: ringed planet over layered mountains at dusk. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="800dp"
+    android:height="200dp"
+    android:viewportWidth="1600"
+    android:viewportHeight="400">
+    <path android:pathData="M0,0h1600v400h-1600z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="0" android:startY="0" android:endX="0" android:endY="400">
+                <item android:offset="0" android:color="#FF0A1230" />
+                <item android:offset="0.5" android:color="#FF2B2C5E" />
+                <item android:offset="0.8" android:color="#FF8A4E6E" />
+                <item android:offset="1" android:color="#FFE99A63" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:pathData="M660,330a520,520 0 1,0 1040,0a520,520 0 1,0 -1040,0z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="radial" android:centerX="1180" android:centerY="330" android:gradientRadius="520">
+                <item android:offset="0" android:color="#B3FFB37A" />
+                <item android:offset="1" android:color="#00FFB37A" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:fillColor="#CCFFFFFF"
+        android:pathData="M180,40a2,2 0 1,0 4,0a2,2 0 1,0 -4,0zM320,90a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0zM460,30a2.5,2.5 0 1,0 5,0a2.5,2.5 0 1,0 -5,0zM610,70a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0zM760,25a2,2 0 1,0 4,0a2,2 0 1,0 -4,0zM900,95a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0zM1040,40a2,2 0 1,0 4,0a2,2 0 1,0 -4,0zM1150,110a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0zM80,120a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0zM540,140a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0z" />
+    <path android:pathData="M1230,60a190,190 0 1,0 380,0a190,190 0 1,0 -380,0z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="radial" android:centerX="1420" android:centerY="60" android:gradientRadius="190">
+                <item android:offset="0.75" android:color="#40B9C4FF" />
+                <item android:offset="1" android:color="#00B9C4FF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path android:pathData="M1270,60a150,150 0 1,0 300,0a150,150 0 1,0 -300,0z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="radial" android:centerX="1370" android:centerY="10" android:gradientRadius="230">
+                <item android:offset="0" android:color="#FFF1E3D3" />
+                <item android:offset="0.55" android:color="#FF9C8DB8" />
+                <item android:offset="1" android:color="#FF3E3F70" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:fillColor="#E64A3F6E"
+        android:pathData="M0,300L80,270L150,285L240,230L300,260L380,210L460,250L540,220L620,265L700,240L780,280L860,230L940,180L1000,215L1060,170L1120,205L1200,150L1270,200L1340,175L1420,230L1500,200L1600,240L1600,400L0,400z" />
+    <path android:pathData="M0,290h1600v90h-1600z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="0" android:startY="290" android:endX="0" android:endY="380">
+                <item android:offset="0" android:color="#00E8C6D6" />
+                <item android:offset="0.5" android:color="#4DE8C6D6" />
+                <item android:offset="1" android:color="#00E8C6D6" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:fillColor="#FF2A2648"
+        android:pathData="M0,340L120,300L210,325L300,285L390,320L470,290L560,330L650,300L740,335L830,290L900,250L960,280L1030,240L1090,275L1160,255L1240,300L1320,270L1400,310L1480,285L1600,320L1600,400L0,400z" />
+    <path
+        android:fillColor="#FF120F24"
+        android:pathData="M0,380L100,350L180,370L260,340L360,375L460,355L560,385L700,360L820,390L960,365L1080,385L1200,350L1300,372L1420,345L1520,368L1600,355L1600,400L0,400z" />
+</vector>

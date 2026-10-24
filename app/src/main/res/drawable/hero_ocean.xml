@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Original hero art: moonrise over a calm night sea with a magenta horizon. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="800dp"
+    android:height="200dp"
+    android:viewportWidth="1600"
+    android:viewportHeight="400">
+    <path android:pathData="M0,0h1600v310h-1600z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="0" android:startY="0" android:endX="0" android:endY="310">
+                <item android:offset="0" android:color="#FF0B0820" />
+                <item android:offset="0.6" android:color="#FF2A1446" />
+                <item android:offset="0.9" android:color="#FF6B2A5E" />
+                <item android:offset="1" android:color="#FFC0566A" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:fillColor="#CCFFFFFF"
+        android:pathData="M150,40a2,2 0 1,0 4,0a2,2 0 1,0 -4,0zM330,100a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0zM520,35a2,2 0 1,0 4,0a2,2 0 1,0 -4,0zM760,80a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0zM940,30a2,2 0 1,0 4,0a2,2 0 1,0 -4,0zM1480,50a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0zM1560,150a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0zM60,170a1.5,1.5 0 1,0 3,0a1.5,1.5 0 1,0 -3,0z" />
+    <path android:pathData="M1030,120a220,220 0 1,0 440,0a220,220 0 1,0 -440,0z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="radial" android:centerX="1250" android:centerY="120" android:gradientRadius="220">
+                <item android:offset="0" android:color="#80F4D6C0" />
+                <item android:offset="1" android:color="#00F4D6C0" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:fillColor="#FFF6EEE2"
+        android:pathData="M1180,120a70,70 0 1,0 140,0a70,70 0 1,0 -140,0z" />
+    <path
+        android:fillColor="#FF1A1030"
+        android:pathData="M0,310L60,292L140,300L230,280L300,296L380,288L430,310zM900,310L980,286L1060,276L1130,290L1190,302L1240,310z" />
+    <path android:pathData="M0,310h1600v90h-1600z">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="linear" android:startX="0" android:startY="310" android:endX="0" android:endY="400">
+                <item android:offset="0" android:color="#FF3A1E4E" />
+                <item android:offset="1" android:color="#FF0A0716" />
+            </gradient>
+        </aapt:attr>
+    </path>
+    <path
+        android:fillColor="#80F4D6C0"
+        android:pathData="M1200,316h100v4h-100zM1215,330h70v4h-70zM1190,344h120v3h-120zM1225,358h50v3h-50zM1205,372h90v3h-90zM1235,386h30v3h-30z" />
+</vector>

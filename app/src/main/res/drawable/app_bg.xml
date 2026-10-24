@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Deep navy page with a soft blue glow from the top left. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <gradient
+                android:angle="270"
+                android:endColor="#FF060910"
+                android:startColor="#FF0F1830" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient
+                android:centerX="0.2"
+                android:centerY="0"
+                android:endColor="#00000000"
+                android:gradientRadius="900dp"
+                android:startColor="#3D3D6BC8"
+                android:type="radial" />
+        </shape>
+    </item>
+</layer-list>

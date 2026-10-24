@@ -2,121 +2,92 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
-
-    <!-- Blurred art of the focused app, like the tvOS top shelf. -->
-    <ImageView
-        android:id="@+id/backdrop"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:alpha="0"
-        android:importantForAccessibility="no"
-        android:scaleType="centerCrop" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/scrim" />
+    android:background="@drawable/app_bg">
 
     <LinearLayout
         android:id="@+id/content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingTop="@dimen/safe_vertical">
+        android:orientation="vertical">
 
+        <!-- Top bar: REM logo, pill navigation, search and clock. -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/safe_horizontal"
-            android:layout_marginEnd="@dimen/safe_horizontal"
+            android:clipChildren="false"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/safe_horizontal"
+            android:paddingTop="22dp"
+            android:paddingEnd="@dimen/safe_horizontal">
 
-            <TextView
-                android:layout_width="0dp"
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_launcher" />
+
+            <LinearLayout
+                android:id="@+id/nav"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="sans-serif-medium"
-                android:letterSpacing="0.08"
-                android:text="@string/app_name"
-                android:textColor="@color/text_secondary"
-                android:textSize="16sp" />
+                android:layout_marginStart="22dp"
+                android:background="@drawable/nav_bg"
+                android:clipChildren="false"
+                android:orientation="horizontal"
+                android:padding="4dp" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/search"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:contentDescription="@string/search"
+                android:padding="11dp"
+                android:src="@drawable/ic_search" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="#33FFFFFF" />
 
             <TextClock
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
-                android:textColor="@color/text_primary"
-                android:textSize="22sp" />
+                android:textColor="#FFFFFFFF"
+                android:textSize="18sp" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/hero_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/safe_horizontal"
-            android:layout_marginTop="36dp"
-            android:layout_marginEnd="@dimen/safe_horizontal"
-            android:ellipsize="end"
-            android:fontFamily="sans-serif-medium"
-            android:maxLines="1"
-            android:text="@string/app_name"
-            android:textColor="@color/text_primary"
-            android:textSize="44sp" />
-
-        <TextView
-            android:id="@+id/hero_hint"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/safe_horizontal"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="@dimen/safe_horizontal"
-            android:text="@string/loading"
-            android:textColor="@color/text_secondary"
-            android:textSize="16sp" />
-
-        <!-- Full width with padded insets so a focused tile can grow without being clipped. -->
-        <ScrollView
-            android:id="@+id/scroll"
+        <!-- Current page (Home, Video, Music, Games, Apps or Settings), built in MainActivity. -->
+        <FrameLayout
+            android:id="@+id/page"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="20dp"
-            android:layout_weight="1"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:fadingEdgeLength="24dp"
-            android:overScrollMode="never"
-            android:paddingStart="@dimen/safe_horizontal"
-            android:paddingEnd="@dimen/safe_horizontal"
-            android:requiresFadingEdge="vertical"
-            android:scrollbars="none">
-
-            <GridLayout
-                android:id="@+id/grid"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:columnCount="5"
-                android:paddingTop="16dp"
-                android:paddingBottom="@dimen/safe_vertical" />
-        </ScrollView>
+            android:layout_marginTop="14dp"
+            android:layout_weight="1" />
     </LinearLayout>
 
     <FrameLayout
         android:id="@+id/overlay"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/overlay"
+        android:background="#CC03050B"
         android:clickable="true"
         android:visibility="gone">
 
         <LinearLayout
-            android:layout_width="640dp"
+            android:layout_width="760dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:background="@drawable/panel_bg"
+            android:clipChildren="false"
+            android:clipToPadding="false"
             android:orientation="vertical"
             android:padding="36dp">
 
@@ -124,8 +95,8 @@
                 android:id="@+id/panel_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:textColor="@color/text_primary"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#FFFFFFFF"
                 android:textSize="30sp" />
 
             <TextView
@@ -133,16 +104,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
-                android:lineSpacingMultiplier="1.25"
-                android:textColor="@color/text_secondary"
-                android:textSize="16sp" />
+                android:lineSpacingMultiplier="1.2"
+                android:textColor="#D9E2EEFF"
+                android:textSize="15sp" />
 
             <LinearLayout
                 android:id="@+id/panel_buttons"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
-                android:orientation="vertical" />
+                android:layout_marginTop="22dp"
+                android:clipChildren="false"
+                android:orientation="horizontal" />
         </LinearLayout>
     </FrameLayout>
 </FrameLayout>

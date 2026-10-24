@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Darkens the left of the hero art so the title and buttons stay readable. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="0"
+        android:centerColor="#59070B18"
+        android:endColor="#00070B18"
+        android:startColor="#F2070B18" />
+</shape>
