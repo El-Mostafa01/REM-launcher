@@ -5,9 +5,11 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
-// keystore.properties (gitignored) holds the release signing key; without it the release APK is unsigned.
+// The release key lives outside the repo in ~/.rem-launcher-signing/ (keystore.properties + .jks);
+// without it the release APK is unsigned. Every update must use this same key.
+val signingDir = File(System.getProperty("user.home"), ".rem-launcher-signing")
 val signing = Properties().apply {
-    rootProject.file("keystore.properties").takeIf { it.exists() }?.inputStream()?.use { load(it) }
+    File(signingDir, "keystore.properties").takeIf { it.exists() }?.inputStream()?.use { load(it) }
 }
 
 android {
@@ -20,12 +22,12 @@ android {
         minSdk = 24
         targetSdk = 35
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.0"
     }
 
     signingConfigs {
         if (!signing.isEmpty) create("release") {
-            storeFile = rootProject.file(signing.getProperty("storeFile"))
+            storeFile = File(signingDir, signing.getProperty("storeFile"))
             storePassword = signing.getProperty("storePassword")
             keyAlias = signing.getProperty("keyAlias")
             keyPassword = signing.getProperty("keyPassword")

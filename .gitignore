@@ -3,6 +3,8 @@
 build/
 local.properties
 *.iml
-# signing secrets: back these up privately, never commit them
+# APKs are published as GitHub Release assets, not committed
+dist/
+# signing secrets live in ~/.rem-launcher-signing/; never commit them
 keystore.properties
 *.jks

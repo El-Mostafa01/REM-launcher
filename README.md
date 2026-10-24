@@ -5,17 +5,20 @@ big rounded app cards that lift and shine on focus, a blurred "top shelf" backdr
 a clock, and a remote-only UI at 1080p. It never modifies firmware, never disables system apps, and
 Google TV stays installed and one button away.
 
-`dist/CinematicTV.apk` is the signed, ready-to-install file.
+The signed, ready-to-install file is published on the
+[Releases page](https://github.com/El-Mostafa01/REM-launcher/releases/latest) as `REM-launcher.apk`.
+This link always serves the newest version:
+https://github.com/El-Mostafa01/REM-launcher/releases/latest/download/REM-launcher.apk
 
 ---
 
 ## Install from a USB drive (no PC or ADB on the projector)
 
-1. **On your computer**, copy `CinematicTV.apk` to a USB drive (FAT32 or exFAT, any folder).
+1. **On your computer**, copy `REM-launcher.apk` to a USB drive (FAT32 or exFAT, any folder).
 2. **Plug the drive into the projector.**
 3. **Open your file manager** on the projector and browse to the USB drive.
    No file manager installed? Install a free one from Google Play first, e.g. *File Commander* or *X-plore*.
-4. **Select `CinematicTV.apk`.**
+4. **Select `REM-launcher.apk`.**
 5. **First time only:** Android says installing from this app is blocked. Choose **Settings**, turn on
    **Allow from this source** for the file manager, then press **Back**.
    *If that toggle doesn't appear:* Settings → System → About → click **Android TV OS build** 7 times
@@ -98,11 +101,13 @@ Requirements: JDK 17, Android SDK with *platforms;android-35* and *build-tools;3
 gradlew.bat test assembleRelease
 ```
 
-The signed APK lands in `app/build/outputs/apk/release/app-release.apk`; copy it to the USB drive as
-`CinematicTV.apk`. Signing reads `keystore.properties` (gitignored). Without it the release build is unsigned.
+The signed APK lands in `app/build/outputs/apk/release/app-release.apk`. Publish it as `REM-launcher.apk`
+on a new GitHub Release (bump `versionCode` first) and the `latest/download` link above picks it up.
+Signing reads `~/.rem-launcher-signing/keystore.properties` and its `.jks`, kept outside this repository.
+Without them the release build is unsigned.
 
-**Back up `cinematictv-release.jks` and `keystore.properties` somewhere private.** They are the only way
-to ship updates that install over this version.
+**Back up the `~/.rem-launcher-signing/` folder somewhere private.** It is the only way to ship updates
+that install over the current version.
 
 ## Project layout
 
