@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Focus highlight: soft specular sheen from the top-left plus a bright rim. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <corners android:radius="14dp" />
+            <gradient
+                android:angle="315"
+                android:centerColor="#00FFFFFF"
+                android:endColor="#00FFFFFF"
+                android:startColor="#40FFFFFF" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners android:radius="14dp" />
+            <stroke
+                android:width="2dp"
+                android:color="#D9FFFFFF" />
+        </shape>
+    </item>
+</layer-list>

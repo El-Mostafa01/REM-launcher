@@ -1,0 +1,5 @@
+<resources>
+    <!-- Android TV overscan-safe margins (5% of 960x540dp); projectors with keystone crop edges too. -->
+    <dimen name="safe_horizontal">48dp</dimen>
+    <dimen name="safe_vertical">27dp</dimen>
+</resources>
